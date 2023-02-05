@@ -1,0 +1,29 @@
+[tool.pdm]
+
+[project]
+name = "lua-love-packaging"
+version = "0.1.0"
+description = "Package your LOVE games with Python"
+authors = [
+    {name = "Richard Dally", email = "r.dally@protonmail.com"},
+]
+dependencies = [
+    "wget>=3.2",
+    "loguru>=0.6.0",
+    "gitpython>=3.1.30",
+]
+requires-python = ">=3.11"
+readme = "README.md"
+license = {text = "GNU General Public License v3.0"}
+
+[tool.pdm.build]
+excludes = ["./**/.git"]
+package-dir = "src"
+includes = ["src"]
+source-includes = ["LICENSE", "README.md"]
+# editables backend doesn't work well with namespace packages
+editable-backend = "path"
+
+[build-system]
+requires = ["pdm-pep517>=1.0"]
+build-backend = "pdm.pep517.api"
