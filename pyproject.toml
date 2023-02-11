@@ -10,7 +10,6 @@ authors = [
 dependencies = [
     "wget>=3.2",
     "loguru>=0.6.0",
-    "gitpython>=3.1.30",
 ]
 requires-python = ">=3.11"
 readme = "README.md"
