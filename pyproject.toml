@@ -1,9 +1,9 @@
 [tool.pdm]
 
 [project]
-name = "lua-love-packaging"
+name = "love_packaging"
 version = "0.1.0"
-description = "Package your LOVE games with Python"
+description = "Package your lua LOVE games with Python"
 authors = [
     {name = "Richard Dally", email = "r.dally@protonmail.com"},
 ]
@@ -17,11 +17,9 @@ readme = "README.md"
 license = {text = "GNU General Public License v3.0"}
 
 [tool.pdm.build]
+includes = ["love_packaging"]
 excludes = ["./**/.git"]
-package-dir = "src"
-includes = ["src"]
 source-includes = ["LICENSE", "README.md"]
-# editables backend doesn't work well with namespace packages
 editable-backend = "path"
 
 [build-system]

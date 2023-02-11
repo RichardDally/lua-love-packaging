@@ -1,4 +1,4 @@
-from windows_packager import WindowsPackager
+from love_packaging.windows_packager import WindowsPackager
 
 
 if __name__ == '__main__':
